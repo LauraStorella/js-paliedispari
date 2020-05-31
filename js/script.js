@@ -1,9 +1,9 @@
-// // ESERCIZIO #1 - PALINDROMA
-// /* Chiedere all’utente di inserire una parola
-// Creare una funzione per capire se la parola inserita è palindroma */
-//
+// ESERCIZIO #1 - PALINDROMA
+/* Chiedere all’utente di inserire una parola
+Creare una funzione per capire se la parola inserita è palindroma */
 
-// IN-BUILT Functions
+
+// Soluzione 1: IN-BUILT Functions
 // RICHIESTA INPUT UTENTE
 // Richiesta parola utente
 var userWord = prompt('Scrivi una parola e scopri se è un palindromo');
@@ -26,27 +26,34 @@ function checkPalindrome(argUserWord) {
 checkPalindrome(userWord);
 
 
-// // FOR Loop
-// // RICHIESTA INPUT UTENTE
-// // Richiesta parola utente
-// var userWord = prompt('Scrivi una parola e scopri se è un palindromo');
-//
-// // FUNZIONE
-// function checkPalindrome(userWord){
-//   // Converto userWord in array, reverse per invertire lettere e converto in stringa
-//   var selectedWord = userWord.split("").reverse().join("");
-//
-//   for (var i = 0; i < userWord.length; i++) {
-//     // Confronto la parola (lettere da dx a sx e viceversa)
-//     if (userWord == wordReverse) {
-//       console.log(userWord + ' è una parola palindroma');
-//     } else {
-//       console.log(userWord + ' non è una parola palindroma');
-//     }
-//   }
-// }
-// // Chiamo la funzione (con input immesso da utente userWord)
-// checkPalindrome(userWord);
+
+// Soluzione 2: FOR Loop
+// RICHIESTA INPUT UTENTE
+// Richiesta parola utente
+var userWord = prompt('Inserisci una parola e scopri se è un palindromo');
+console.log(userWord);
+// Controllo lunghezza stringa
+console.log(userWord.length);
+
+// Converto userWord in array
+var arrUserWord = userWord.split("");
+console.log(arrUserWord);
+
+// FUNCTION
+function checkPalindrome(argUserWord) {
+
+  for (var i = 0; i < arrUserWord.length; i++) {
+
+    // Controllo che la stringa coincida con se stessa letta al contrario
+    if ( arrUserWord[i] == arrUserWord[arrUserWord.length - (i+1) ] ) {
+      console.log(userWord + ' è un palindromo');
+    } else {
+      console.log(userWord + ' non è un palindromo');
+    }
+  }
+}
+// Chiamo funzione
+checkPalindrome(userWord);
 
 
 
