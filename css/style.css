@@ -1,3 +1,64 @@
+.main-wrapper {
+  width: 70%;
+  margin: 20px auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: #f0db4f;
+}
+h1 span {
+  color: #323330;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 5px;
+  background-color: lightgray;
+  position: relative;
+}
+.text.text-exercise p:before {
+  content: '“';
+  font-family: 'PT Mono', sans-serif;
+  font-size: 55px;
+  color: #888;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+.text.text-exercise p:after {
+  content: '”';
+  font-family: 'PT Mono', sans-serif;
+  font-size: 55px;
+  color: #888;
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: -35px;
+}
+.text span {
+  font-style: italic;
+  margin: 0;
+}
+.text.text-code {
+  display: block;
+  text-align: left;
+  font-family: 'PT Mono', sans-serif;
+  font-size: 12px;
+}
+
+.exercise-pics {
+  display: flex;
+}
+
+
+
 /* DEBUGG - start rules*/
 /* debug {}
   .debug .container {
@@ -11,23 +72,7 @@
   } */
 /* DEBUGG - end rules */
 
-/* PALETTE */
-/* body {
-  background-color: #272a2f;
-  background-color: #333941;
-  background-color: #3f4752;
-  background-color: #7c7d82;
-  background-color: #4d5967;
-  background-color: #c7cacf;
-  background-color: #7bc876;
-  background-color: #6ba569;
-  background-color: #5d8864;
-  background-color: #07aaf5;
-  background-color: #2c4d60;
-  background-color: #d4d4d5;
-  background-color: #35363b;
-  background-color: #27292e;
-} */
+
 
 /* GENERAL RULES (reset) - start */
 general rules {}
@@ -46,7 +91,7 @@ general rules {}
   }
 
   img {
-    width: 100%;
+    width: 50%;
   }
 /* GENERAL RULES (reset) - end */
 
